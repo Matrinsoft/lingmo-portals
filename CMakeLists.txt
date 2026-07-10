@@ -11,16 +11,11 @@ find_package(Qt6 REQUIRED COMPONENTS Core DBus)
 add_library(lingmo-portals SHARED
     src/main.cpp
 )
+target_compile_definitions(lingmo-portals PRIVATE LINGMO_PORTALS_LIBRARY)
 
 target_link_libraries(lingmo-portals PUBLIC
     Qt6::Core
     Qt6::DBus
-)
-
-include(GenerateExportHeader)
-generate_export_header(lingmo-portals
-    EXPORT_MACRO_NAME LINGMO_LINGMO_PORTALS_EXPORT
-    EXPORT_FILE_NAME /export.h
 )
 
 install(TARGETS lingmo-portals
