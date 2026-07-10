@@ -1,4 +1,4 @@
-﻿Source: lingmo-portals
+Source: lingmo-portals
 Section: libs
 Priority: optional
 Maintainer: Lingmo OS Team <team@lingmo.org>
@@ -7,23 +7,18 @@ Build-Depends:
     debhelper-compat (= 13),
     pkg-config,
     qt6-base-dev (>= 6.5),
-    qt6-base-dev,
 Standards-Version: 4.6.2
 Homepage: https://github.com/Matrinsoft/lingmo-portals
 Rules-Requires-Root: no
 
-Package: liblingmo-portals1
+Package: liblingmoportals1
 Architecture: any
-Depends:
-    ,
-    ,
-Description: Lingmo Portals
- Lingmo Desktop Lingmo Portals.
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: lingmo-portals
+ Lingmo Desktop lingmo-portals.
 
-Package: liblingmo-portals-dev
+Package: liblingmoportals-dev
 Architecture: any
-Depends:
-    liblingmo-portals1 (= ),
-    ,
-Description: Lingmo Portals - development files
+Depends: liblingmoportals1 (= ${binary:Version}), ${misc:Depends}
+Description: lingmo-portals - development files
  This package contains the development files.
